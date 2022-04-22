@@ -52,9 +52,13 @@ function renderBtns() {
   });
 }
 
+let points = 0;
+
 // 2. Update points
 function updatePoints(e) {
   console.log(e.target.value);
+  e.target.value === "true" ? (points = points + 5) : (points = points - 5);
+  pointsEl.innerHTML = `${points} points today!`;
 }
 
 renderBtns();
