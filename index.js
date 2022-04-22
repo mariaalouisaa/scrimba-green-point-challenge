@@ -47,6 +47,9 @@ function renderBtns() {
     button.innerHTML = `${item.emoji} ${item.name}`;
     button.classList.add("btn");
     button.value = item.good;
+    button.value === "true"
+      ? (button.style.background = "chartreuse")
+      : (button.style.background = "indianred");
     button.addEventListener("click", updatePoints);
     btnsContainer.append(button);
   });
@@ -67,10 +70,10 @@ renderBtns();
 // The button should show:
 // ✔️ 1. the emoji
 // ✔️ 2. the action name
-//  3. Add +5 points to the user’s score for good actions, and -5 for bad actions on click
-// 4. Update the points total in the DOM on click
+// ✔️ 3. Add +5 points to the user’s score for good actions, and -5 for bad actions on click
+// ✔️ 4. Update the points total in the DOM on click
 
-// stretch goal 1️⃣: Change each button color, green for good activities, red for bad.
+// ✔️ stretch goal 1️⃣: Change each button color, green for good activities, red for bad.
 
 // stretch goal 2️⃣: Change the background color to reflect the user's total points. 0 or above = green, below 0 = red.
 
