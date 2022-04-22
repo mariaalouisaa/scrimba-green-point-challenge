@@ -40,24 +40,30 @@ const actionsArr = [
   },
 ];
 
+// 1. Render buttons onto page
 function renderBtns() {
-  // 1. Render buttons onto page
-  // 2. Update points
   actionsArr.forEach((item) => {
     let button = document.createElement("button");
-    button.innerHTML = item.name;
+    button.innerHTML = `${item.emoji} ${item.name}`;
     button.classList.add("btn");
+    button.value = item.good;
+    button.addEventListener("click", updatePoints);
     btnsContainer.append(button);
   });
 }
 
+// 2. Update points
+function updatePoints(e) {
+  console.log(e.target.value);
+}
+
 renderBtns();
 
-// Task: For each action in actionsArr, render a button on the page which matches the design on the slide.
+// Task: ✔️ For each action in actionsArr, render a button on the page which matches the design on the slide.
 // The button should show:
-// 1. the emoji
-// 2. the action name
-// 3. Add +5 points to the user’s score for good actions, and -5 for bad actions on click
+// ✔️ 1. the emoji
+// ✔️ 2. the action name
+//  3. Add +5 points to the user’s score for good actions, and -5 for bad actions on click
 // 4. Update the points total in the DOM on click
 
 // stretch goal 1️⃣: Change each button color, green for good activities, red for bad.
