@@ -43,6 +43,12 @@ const actionsArr = [
 function renderBtns() {
   // 1. Render buttons onto page
   // 2. Update points
+  actionsArr.forEach((item) => {
+    let button = document.createElement("button");
+    button.innerHTML = item.name;
+    button.classList.add("btn");
+    btnsContainer.append(button);
+  });
 }
 
 renderBtns();
