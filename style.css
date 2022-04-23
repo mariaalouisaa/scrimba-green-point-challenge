@@ -30,7 +30,7 @@ body {
 .btns-container {
   width: 40%;
   text-align: center;
-  background: white;
+  background: green;
   padding: 2em;
   border-radius: var(--border-rad-5);
   font-size: 1.5rem;
