@@ -72,7 +72,7 @@ function updatePoints(e) {
 
 function updateActivity() {
   activity++;
-  console.log(activity);
+  document.querySelector("#activity").innerHTML = `Activity count: ${activity}`;
 }
 
 renderBtns();
@@ -88,4 +88,4 @@ renderBtns();
 
 // ✔️ stretch goal 2️⃣: Change the background color to reflect the user's total points. 0 or above = green, below 0 = red.
 
-// stretch goal 3️⃣: Add an activity count.
+// ✔️ stretch goal 3️⃣: Add an activity count.
