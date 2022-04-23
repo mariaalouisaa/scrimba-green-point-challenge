@@ -56,10 +56,10 @@ function renderBtns() {
 }
 
 let points = 0;
+let activity = 0;
 
 // 2. Update points
 function updatePoints(e) {
-  console.log(e.target.value);
   e.target.value === "true" ? (points = points + 5) : (points = points - 5);
   pointsEl.innerHTML = `${points} points today!`;
   if (points < 0) {
@@ -67,6 +67,12 @@ function updatePoints(e) {
   } else {
     btnsContainer.style.background = "green";
   }
+  updateActivity();
+}
+
+function updateActivity() {
+  activity++;
+  console.log(activity);
 }
 
 renderBtns();
@@ -80,6 +86,6 @@ renderBtns();
 
 // ✔️ stretch goal 1️⃣: Change each button color, green for good activities, red for bad.
 
-// stretch goal 2️⃣: Change the background color to reflect the user's total points. 0 or above = green, below 0 = red.
+// ✔️ stretch goal 2️⃣: Change the background color to reflect the user's total points. 0 or above = green, below 0 = red.
 
 // stretch goal 3️⃣: Add an activity count.
